@@ -1,0 +1,30 @@
+gym/wrappers/atari_preprocessing.py
+gym/wrappers/_init_.py
+README.md
+setup.py
+tests/wrappers/test_atari_preprocessing.py
+
+
+part b:
+   wc -l gym-master/ LICENSE.md
+ 34 LICENSE.md
+ 34 total
+
+Number of lines are 34
+
+part c:
+ grep -r "atari" gym-master | wc -l
+The number of occurrences of the word “atari” that appear in all of the files found in directory gym-master is 
+12
+
+task 2 answer
+
+part A
+git version 2.40.1.windows.1
+git log message
+commit 5cdbc1bdf4825c372d98454d3863d3a5e4220a3a (HEAD -> master, origin/master, origin/HEAD)
+Author: Vijay Varma <vijay.varma392@gmail.com>
+Date:   Tue Sep 26 13:57:46 2023 -0400
+
+    Add ExampleJupyterNotebookReport
+
