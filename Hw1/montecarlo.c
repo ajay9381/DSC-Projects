@@ -22,7 +22,7 @@ int main() {
     srand((unsigned int)time(NULL));
 
     // Create a file to store the results
-    FILE *fp = fopen("montecarlo_data.csv", "w");
+    FILE *fp = fopen("montecarlo_data.dat", "w");
     if (fp == NULL) {
         perror("Error opening the file");
         return 1;
@@ -63,16 +63,6 @@ int main() {
 
     // Close the file
     fclose(fp);
-
-
-    // Execute the Bash script
-    int status = system("./runTrials.sh");
-
-    if (status == 0) {
-    printf("Bash script executed successfully.\n");
-    } else {
-    printf("Error executing the Bash script.\n");
-    }
 
     return 0;
 }
