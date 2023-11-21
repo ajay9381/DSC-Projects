@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -J lab7
+#SBATCH -o lab7.out
+#SBATCH -e lab7.err
+#SBATCH -p debug
+#SBATCH -N 1
+#SBATCH -n 64
+#SBATCH -t 00:05:00
+#SBATCH -A SEE230009
+#SBATCH --mail-user=apadala@umassd.edu
+#SBATCH --mail-type=all
+
+echo "Run 1 with 2 threads..."
+export OMP_NUM_THREADS=2
+echo $OMP_NUM_THREADS
+./parfor
+
+echo "Run 2 with 64 threads..."
+export OMP_NUM_THREADS=64
+echo $OMP_NUM_THREADS
+./parfor 
+
